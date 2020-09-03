@@ -1,0 +1,4 @@
+com\atguigu\springcloud\controller\OrderFeignHystrixController.class
+com\atguigu\springcloud\OrderFeignHystrixMain80.class
+com\atguigu\springcloud\service\PaymentFallbackService.class
+com\atguigu\springcloud\service\PaymentFeignHystrixService.class

@@ -1,0 +1,33 @@
+server:
+  port: 7001
+
+eureka:
+  instance:
+    hostname: eureka7001.com #eureka服务端实例名称
+  client:
+    #false表示不像用户中心注册自己
+    register-with-eureka: false
+    #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
+    fetch-registry: false
+    service-url:
+      #设置与eureka Server交互的地址查询服务和注册服务都需要依赖这个地址
+      defaultZone: http://eureka7002.com:7002/eureka/
+
+  #server:
+    #关闭自我保护机制，保证不可用服务被及时剔除
+    #enable-self-preservation: false
+    #s设置2S秒清除
+    #eviction-interval-timer-in-ms: 2000
+
+    #此处服务未用到数据库，若不报错：1此处增加配置 2 pom.xml中把mybatis-spring-boot-starter注释掉
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource      #当前数据源操作类型
+    driver-class-name: com.mysql.cj.jdbc.Driver          #myql驱动包
+    url: jdbc:mysql://localhost:3306/mysql?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.atguigu.springcloud.entities        #所有entities实体类所在包
