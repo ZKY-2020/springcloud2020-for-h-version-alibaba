@@ -26,7 +26,7 @@ public class MessageProviderImpl implements IMessageProvider {
 
     @Override
     public String send() {
-        UUID randomUUID = UUID.randomUUID();
+        String randomUUID = UUID.randomUUID().toString();
         log.info("uuid:"+randomUUID);
         output.send(MessageBuilder.withPayload(randomUUID).build());
         log.info("********uuid:"+randomUUID);
