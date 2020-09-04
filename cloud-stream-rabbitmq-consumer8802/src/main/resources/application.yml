@@ -19,7 +19,7 @@ spring:
 
 
       bindings: #服务的整合处理
-         input: #这个名字是一个通道的名字
+        - input: #这个名字是一个通道的名字 #-需要去除，否则无效
             destination: studyExchange #表示要使用的Exchange名称定义
             content-type: application/json #设置消息类型，本次为json，文本则设置“text/plain”
             binder: defaultRabbit #设置要绑定的消息服务具体设置 #红色无影响
