@@ -39,4 +39,9 @@ public class PaymentController {
         log.info("****result:"+circuitBreaker);
         return circuitBreaker;
     }
+
+    @GetMapping("/payment/zipkin")
+    public String paymentZipkin(){
+       return "hi,I am paymentZipkin server fall back!!!!1" ;
+    }
 }

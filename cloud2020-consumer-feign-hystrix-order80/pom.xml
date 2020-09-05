@@ -12,6 +12,12 @@
     <artifactId>cloud2020-consumer-feign-hystrix-order80</artifactId>
 
     <dependencies>
+        <!--包含sleuth+zipkin-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+
         <!--openfeign-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

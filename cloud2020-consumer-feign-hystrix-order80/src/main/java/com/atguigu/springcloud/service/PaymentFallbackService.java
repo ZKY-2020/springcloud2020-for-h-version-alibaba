@@ -21,4 +21,10 @@ public class PaymentFallbackService implements PaymentFeignHystrixService{
         String s="PaymentFallbackService fall back paymentInfo_TimeOut";
         return s;
     }
+
+    @Override
+    public String paymentZipkin() {
+        String s="PaymentFallbackService fall back paymentInfo_paymentZipkin";
+        return s;
+    }
 }

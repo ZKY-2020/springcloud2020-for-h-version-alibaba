@@ -45,4 +45,11 @@ public class OrderFeignHystrixController {
         return "Global 异常处理信息，请稍后再试";
     }
 
+    //zipkin+sleuth
+    @GetMapping("/consumer/payment/zipkin")
+    public String paymentZipkin(){
+        String paymentZipkin = paymentFeignHystrixService.paymentZipkin();
+        log.info("paymentZipkin:"+paymentZipkin);
+        return paymentZipkin;
+    }
 }
