@@ -1,2 +1,4 @@
-com\atguigu\springcloud\MainApp8401.class
+com\atguigu\springcloud\controller\RateLimitController.class
+com\atguigu\springcloud\myHandler\CustomerBlockHandler.class
 com\atguigu\springcloud\controller\FlowLimitController.class
+com\atguigu\springcloud\MainApp8401.class
