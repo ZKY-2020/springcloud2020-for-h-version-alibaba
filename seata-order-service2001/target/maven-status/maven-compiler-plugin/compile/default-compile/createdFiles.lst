@@ -7,5 +7,8 @@ com\atguigu\springcloud\domain\Order.class
 com\atguigu\springcloud\controller\OrderController.class
 com\atguigu\springcloud\service\StorageService.class
 com\atguigu\springcloud\service\OrderService.class
+com\atguigu\springcloud\job\QuqrtzMain.class
+com\atguigu\springcloud\job\QuqrtzDemo.class
+com\atguigu\springcloud\job\QuqrtzMain1.class
 com\atguigu\springcloud\service\impl\OrderServiceImpl.class
 com\atguigu\springcloud\service\AccountService.class

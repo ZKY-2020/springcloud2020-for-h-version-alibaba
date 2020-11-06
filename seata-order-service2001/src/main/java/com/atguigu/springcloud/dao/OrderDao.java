@@ -11,4 +11,7 @@ public interface OrderDao {
 
     //修改订单状态
     void update(@Param("userId") Long userId,@Param("status") Integer status);
+
+    //根据订单Id查询
+    Order selectById(@Param("id") Long id);
 }
